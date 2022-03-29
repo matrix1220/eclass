@@ -1,0 +1,5 @@
+fastapi
+requests
+parse
+pydantic
+beautifulsoup4

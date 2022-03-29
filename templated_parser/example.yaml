@@ -1,0 +1,20 @@
+
+
+course_list:
+  contigious: # multiple
+    - select: "div.course_lists"
+    - select_all: "div.course_box"
+    #xselect_all: "div > asd"
+    - for_all:
+        unite_object:
+          - contigious:
+            - select: a
+            - attribute: href
+            - parse: "http://eclass.inha.ac.kr/course/view.php?id={id}"
+          - contigious:
+            - select: div.course-name div.course-title
+            - select: h3
+            - parse: "{name}[{}-{course}-{section}]"
+        # - composite:
+        #   id:
+        #     parse: "http://eclass.inha.ac.kr/course/view.php?id={id}
