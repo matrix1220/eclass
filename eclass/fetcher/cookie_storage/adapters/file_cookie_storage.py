@@ -3,7 +3,7 @@ import os.path, os
 import requests, pickle
 
 class FileCookieStorage():
-    def __init(self, path = '.'):
+    def __init__(self, path = '.'):
         self.path = path
 
     def restore(self, username, session):

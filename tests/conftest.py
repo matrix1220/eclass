@@ -1,7 +1,7 @@
 from pytest import fixture
 
-from templated_parser import Parser
+# from templated_parser import templated_parse
 
-@fixture
-def parser():
-    return Parser()
+# @fixture
+# def templated_parse():
+#     return templated_parse

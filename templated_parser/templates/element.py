@@ -5,9 +5,16 @@ class Select(Template):
         self.selector = selector
 
     def apply(self, object):
+        return object.css(self.selector)
+
+class SelectGet(Template):
+    def __init__(self, selector):
+        self.selector = selector
+
+    def apply(self, object):
         return object.css(self.selector).get()
 
-class SelectArray(Template):
+class SelectGetArray(Template):
     def __init__(self, selector):
         self.selector = selector
 

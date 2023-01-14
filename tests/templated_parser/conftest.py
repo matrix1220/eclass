@@ -1,5 +1,7 @@
+
 from pytest import fixture
 
+from posixpath import dirname
 
 @fixture
 def test_html():
@@ -13,3 +15,7 @@ def test_html():
 
 </body>
 </html>"""
+
+@fixture
+def eclass_html():
+    return open(f"{dirname(__file__)}/eclass.html").read()

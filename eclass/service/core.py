@@ -1,6 +1,6 @@
 
 from eclass.parser import parse
-MAIN_PAGE = "http://eclass.inha.ac.kr"
+from eclass.links import MAIN_PAGE
 
 class EclassService:
     def __init__(self, fetcher):
@@ -9,6 +9,6 @@ class EclassService:
     def list_assignments(self):
         pass
 
-    def list_courses(self):
-        page = self.fetcher.get(MAIN_PAGE)
+    async def list_courses(self):
+        page = await self.fetcher.get(MAIN_PAGE)
         return parse(MAIN_PAGE, page)
